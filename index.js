@@ -2,8 +2,8 @@
  * Inject this script to facebook page to get it to work
  */
 window.addEventListener('scroll', () => {
-  var log = (...args) => true && console.log.call(console, ...args);
-  //                       ^---- change this to false for debugging
+  var log = (...args) => false && console.log.call(console, ...args);
+  //                       ^---- change this to true for debugging
   var video = null;
   document.querySelectorAll('video:not(.floating)').forEach(v => video = !v.paused ? v : video);
   if (video) {
@@ -27,3 +27,4 @@ window.addEventListener('scroll', () => {
     log('No playing hidden video found :)');
   }
 }, false);
+console.log('Facebook Floating Video initiated!');

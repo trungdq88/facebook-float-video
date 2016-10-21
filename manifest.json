@@ -1,0 +1,19 @@
+{
+  "manifest_version": 2,
+
+  "name": "Facebook Floating Video",
+  "description": "This will pin the playing videos if you scroll down so you can watch the video and keep scrolling.",
+  "version": "1.0",
+
+  "browser_action": {
+   "default_icon": "icon.png",
+   "default_popup": "popup.html"
+  },
+  "content_scripts": [ {
+    "js": [ "index.js" ],
+    "matches": [ "http://*/*", "https://*/*"]
+  }],
+  "permissions": [
+   "activeTab"
+   ]
+}
