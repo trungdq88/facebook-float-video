@@ -18,6 +18,7 @@ window.addEventListener('scroll', () => {
       const handler = function () {
         // video.parentNode.removeChild(video);
         video.setAttribute('style', oldStyle);
+        video.classList.remove('floating');
         oldParent.appendChild(video);
         video.removeEventListener('mousemove', handler);
         log('Put the video back to where it is.');
